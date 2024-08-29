@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Conformation</title>
+</head>
+<body>
+<div>
+    The Customer Conformed: <span th:text="${customer.firstName}+' '+${customer.lastName}"></span>
+    <br><br>
+    The Total Number of Free Passes: <span th:text="${customer.freePass}"></span>
+    <br><br>
+    Postal Code: <Span th:text="${customer.postalCode}"></Span>
+    <br><br>
+
+</div>
+</body>
+</html>
