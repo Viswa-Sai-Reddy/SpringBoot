@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Thymeleaf Demo</title>
+    <link rel="stylesheet" th:href="@{/CSS/demo.css}"/>
+</head>
+<body>
+<!--<p class="texts" th:text="'The time and date ' + ${theDateTime}" ></p>-->
+
+Name :<span th:text="${param.studentName}"/>
+<br><br>
+Name : <span th:text="${message}" />
+
+</body>
+</html>

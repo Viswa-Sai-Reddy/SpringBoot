@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Conformation</title>
+</head>
+<body>
+<h3> Student Conformation</h3>
+The Student is: <span th:text="${student.firstName}+' '+${student.lastName}"></span>
+<br><br>
+<span th:text="${student.firstName}+' '+${student.lastName}+' is from '+${student.country}"></span>
+<br><br>
+<span th:text="'Favorite Language of '+${student.firstName}+' is: '+${student.favoriteLanguage}"></span>
+<br><br>
+Favorite Operating System:
+<ul>
+    <li th:each="temp: ${student.operatingSystem}" th:text="${temp}"></li>
+</ul>
+
+</body>
+</html>
