@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Page</title>
+    <style>
+        .warning{color:red}
+    </style>
+</head>
+<body>
+<h2>Custom Login Page</h2>
+
+<form action="#" method="POST" th:action="@{/authenticateTheUser}">
+    <!--Adding warning msg for wrong password -->
+    <div th:if="${param.error}"><i class="warning">Sorry! you entered wrong Username/Password.</i></div>
+    <!--Adding Log off msg -->
+    <div th:if="${param.logout}"><b>You have successfully logout.</b></div>
+    <p>User Name: <input name="username" type="text"></p>
+    <p>Password: <input name="password" type="text"></p>
+    <p><input type="submit" value="Login"></p>
+</form>
+
+</body>
+</html>
